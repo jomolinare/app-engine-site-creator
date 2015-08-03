@@ -1,0 +1,7 @@
+## Introduction ##
+
+App Engine Site Creator primarily uses the Django web framework with App Engine specific modifications for data models and user authentication.  Site Creator provides a hierarchical page structure, and allows an unlimited number of files (or file URLs) to be added to each page as attachments.  Page content is stored in the datastore in HTML format.  It can be uploaded as a html file or created via a web-based editor.  All HTML tags are supported, and objects like gadgets or video can easily be embedded in pages.
+
+Site Creator handles user-level authentication via the App Engine login framework.  Users who are not currently logged in will be prompted to do so using their Google account.  Each page can have an access control list, which makes it possible to grant read and write permissions on a user or group-specific level.  If a page does not have an ACL, it inherits the ACL of its parent (the page one level higher in the hierarchy).  In this way, permissions for whole sub-trees can be changed from a common point.
+
+The code is extensively documented, and can be read by [browsing](http://code.google.com/p/app-engine-site-creator/source/browse/#svn/trunk) the source or summarized using pydoc.
